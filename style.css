@@ -16,6 +16,7 @@ body {
     height: 100vh;
     overflow: hidden;
 }
+
 /*bg-deskotop image*/
 .background__image {
     height: 100vh; 
@@ -82,10 +83,11 @@ body {
     border-radius: 20px;
     border: none;
     font-family: "Poppins";
-    color: var(--soft-magenta);
+    color: var(--violet);
+    font-size: 1rem;
+    font-weight: 400;
 }
 .main__right--button:hover{
-    max-width: 160px;
     background-color: var(--soft-magenta);
     color: #ffff;
     transition: 0.3s;
@@ -120,19 +122,23 @@ body {
     color: hsl(228, 45%, 44%); 
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1025px) {
     .background__image img {
-        background-image: url(./images/bg-mobile.svg);
+        display: none;
     }
-    *{
-        padding: 0;
-        margin: 0;
-    }
+}
 
+@media (max-width: 1024px) {
+        
     body {
         display: grid;
         position: relative;
         height: 100vh;
+        background-image: url(./images/bg-mobile.svg);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center top;
+        background-size: 500px;
     }
 
     .main {
@@ -140,7 +146,6 @@ body {
     }
     
     .main__left {
-        border: 1px solid red;
         height: 400px;
         max-width: 500px;
         position: absolute;
@@ -150,14 +155,15 @@ body {
 
     .main__left--logo {
         width: 180px;
+        margin-left: 15px;
     }
 
     .main__left--mockups {
         max-width: 400px;
+        margin-left: 15px;
     }
 
     .main__right {
-        border: 1px solid red;
         display: grid;
         justify-content: center;
         align-items: center;
@@ -167,20 +173,23 @@ body {
         text-align: center;
     }
     .main__right--button {
-        width: 250px;
+        max-width: 350px;
         height: 40px;
-        margin-top: 20px;
+        margin-top: 30px;
         border-radius: 20px;
         border: none;
         font-family: "Poppins";
-        color: var(--soft-magenta);
-    }
-    .main__right--button:hover{
-        max-width: 160px;
-        background-color: var(--soft-magenta);
-        color: #ffff;
-        transition: 0.3s;
-        cursor: grab;
+        color: var(--violet);
+        font-weight: 400;
+        font-size: 1rem;
+        position: relative;
+        left: 50px;
     }
     
+    .main__right--logos {
+        position: relative;
+        top: 0;
+        left:150px;
+        margin-top: 80px;
+    }
 }
